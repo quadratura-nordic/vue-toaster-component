@@ -1,24 +1,12 @@
-declare global {
-  interface Window {
-    Vue: any;
-  }
-}
-
 import ToastComponent from "./ToasterComponent.vue";
 import { useToaster } from "./Toaster";
-import { App } from "vue";
+import { App, Plugin } from "vue";
 
-const ToastPlugin = {
-  install: (app: App, options = {}) => {
+export default {
+  install(Vue: App, options = {}) {
     const instance = useToaster(options);
-    app.config.globalProperties.$toast = instance;
-    app.provide("$toast", instance);
+    Vue.config.globalProperties.$toast = instance;
+    Vue.provide("$toast", instance);
   },
-};
-
-if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(ToastPlugin);
-}
-
-export default ToastPlugin;
-export { useToaster, ToastPlugin, ToastComponent };
+} as Plugin;
+export { useToaster, ToastComponent };
