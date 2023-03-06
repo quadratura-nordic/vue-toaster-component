@@ -48,9 +48,9 @@ const props = withDefaults(
     position?: ToastPosition;
   }>(),
   {
-    // duration: 4000,
+    duration: 4000,
     // for debugging set duration to a higher value
-    duration: 400000,
+    // duration: 400000,
     dismissible: true,
     pauseOnHover: true,
     position: "top-right",
@@ -126,12 +126,12 @@ function setupContainer() {
   if (!parentTop.value) {
     parentTop.value = document.createElement("div");
     parentTop.value.className = "toaster toaster-top";
-    setStyles(parentTop.value);
+    // setStyles(parentTop.value);
   }
   if (!parentBottom.value) {
     parentBottom.value = document.createElement("div");
     parentBottom.value.className = "toaster toaster-bottom";
-    setStyles(parentBottom.value);
+    // setStyles(parentBottom.value);
   }
 
   const container = document.body;
