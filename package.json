@@ -1,13 +1,12 @@
 {
   "name": "vue-toaster-component",
-  "main": "./dist/vue-toaster-component.umd.js",
-  "module": "./dist/vue-toaster-component.esm.js",
+  "main": "./dist/vue-toaster-component.umd.ts",
+  "module": "./dist/vue-toaster-component.esm.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-toaster-component.esm.js",
-      "require": "./dist/vue-toaster-component.umd.js"
-    },
-    "./package.json": "./package.json"
+      "import": "./dist/vue-toaster-component.esm.ts",
+      "require": "./dist/vue-toaster-component.umd.ts"
+    }
   },
   "version": "1.2.0",
   "scripts": {
