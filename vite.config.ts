@@ -1,13 +1,15 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [vue()],
   build: {
     lib: {
-      entry: "src/main.ts",
+      entry: resolve(__dirname, "lib/main.ts"),
       name: "vue-toaster-component",
-      fileName: (format) => `vue-toaster-component.${format}.js`,
+      fileName: "vue-toaster-component",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -22,5 +24,4 @@ export default defineConfig({
       },
     },
   },
-  plugins: [vue()],
 });

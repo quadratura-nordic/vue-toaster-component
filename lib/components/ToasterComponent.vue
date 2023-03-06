@@ -196,7 +196,7 @@ function removeElement(el: HTMLElement) {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @keyframes fadeOut {
   from {
     opacity: 1;

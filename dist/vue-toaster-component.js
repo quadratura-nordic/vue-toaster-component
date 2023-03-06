@@ -1,7 +1,7 @@
 var x = Object.defineProperty;
-var D = (s, t, e) => t in s ? x(s, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : s[t] = e;
-var d = (s, t, e) => (D(s, typeof t != "symbol" ? t + "" : t, e), e);
-import { defineComponent as H, ref as c, computed as C, onMounted as L, onBeforeUnmount as A, render as w, openBlock as m, createBlock as F, Transition as G, unref as b, withCtx as I, withDirectives as N, createElementVNode as v, normalizeClass as R, createElementBlock as f, createCommentVNode as $, toDisplayString as B, vShow as S, h as j } from "vue";
+var D = (o, t, e) => t in o ? x(o, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : o[t] = e;
+var d = (o, t, e) => (D(o, typeof t != "symbol" ? t + "" : t, e), e);
+import { defineComponent as H, ref as c, computed as C, onMounted as I, onBeforeUnmount as L, render as w, openBlock as m, createBlock as A, Transition as F, unref as B, withCtx as G, withDirectives as N, createElementVNode as v, normalizeClass as R, createElementBlock as f, createCommentVNode as $, toDisplayString as b, vShow as S, h as j } from "vue";
 class V {
   constructor(t, e) {
     d(this, "startedAt");
@@ -20,7 +20,7 @@ class V {
     clearTimeout(this.timer);
   }
 }
-const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-text" }, W = { class: "body-text-bold" }, X = { class: "fine-print" }, E = /* @__PURE__ */ H({
+const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-text" }, W = { class: "body-text-bold" }, X = { class: "fine-print" }, Y = /* @__PURE__ */ H({
   __name: "ToasterComponent",
   props: {
     toaster: { default: () => ({
@@ -36,8 +36,8 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
     onDismiss: null,
     position: { default: "top-right" }
   },
-  setup(s) {
-    const t = s, e = {
+  setup(o) {
+    const t = o, e = {
       TOP_RIGHT: "top-right",
       TOP: "top",
       TOP_LEFT: "top-left",
@@ -80,9 +80,9 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
           };
       }
     });
-    L(() => {
-      M(), y();
-    }), A(() => {
+    I(() => {
+      M(), _();
+    }), L(() => {
       T();
     });
     function M() {
@@ -93,66 +93,66 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
       a.appendChild(n.value), a.appendChild(r.value);
     }
     function P() {
-      var a, o;
-      return t.queue ? n.value && ((a = n.value) == null ? void 0 : a.childElementCount) > 0 || r.value && ((o = r.value) == null ? void 0 : o.childElementCount) > 0 : !1;
+      var a, s;
+      return t.queue ? n.value && ((a = n.value) == null ? void 0 : a.childElementCount) > 0 || r.value && ((s = r.value) == null ? void 0 : s.childElementCount) > 0 : !1;
     }
     function T(...a) {
       i.value && i.value.stop(), clearTimeout(h.value), l.value = !1, setTimeout(() => {
         var u;
         (u = t.onDismiss) == null || u.apply(null, a);
-        const o = p.value;
-        o && (w(null, o), _(o));
+        const s = p.value;
+        s && (w(null, s), g(s));
       }, 150);
     }
-    function y() {
-      var o, u;
+    function _() {
+      var s, u;
       if (P()) {
-        h.value = setTimeout(y, 250);
+        h.value = setTimeout(_, 250);
         return;
       }
-      const a = (o = p.value) == null ? void 0 : o.parentElement;
-      (u = k.value) == null || u.insertAdjacentElement("afterbegin", p.value), _(a), l.value = !0, t.duration && (i.value = new V(T, t.duration));
+      const a = (s = p.value) == null ? void 0 : s.parentElement;
+      (u = k.value) == null || u.insertAdjacentElement("afterbegin", p.value), g(a), l.value = !0, t.duration && (i.value = new V(T, t.duration));
     }
     function q(...a) {
-      var o;
-      t.dismissible && ((o = t.onClick) == null || o.apply(null, a), T());
+      var s;
+      t.dismissible && ((s = t.onClick) == null || s.apply(null, a), T());
     }
-    function g(a) {
+    function y(a) {
       !t.pauseOnHover || !i.value || (a ? i.value.pause() : i.value.resume());
     }
-    function _(a) {
-      var o;
-      typeof a.remove < "u" ? a.remove() : (o = a.parentNode) == null || o.removeChild(a);
+    function g(a) {
+      var s;
+      typeof a.remove < "u" ? a.remove() : (s = a.parentNode) == null || s.removeChild(a);
     }
-    return (a, o) => (m(), F(G, {
-      "enter-active-class": b(O).enter,
-      "leave-active-class": b(O).leave
+    return (a, s) => (m(), A(F, {
+      "enter-active-class": B(O).enter,
+      "leave-active-class": B(O).leave
     }, {
-      default: I(() => [
+      default: G(() => [
         N(v("div", {
           ref_key: "toasterMessage",
           ref: p,
           role: "alert",
-          class: R(["toaster-message", [`toaster-position-${s.position}`]]),
-          onMouseover: o[0] || (o[0] = (u) => g(!0)),
-          onMouseleave: o[1] || (o[1] = (u) => g(!1))
+          class: R(["toaster-message", [`toaster-position-${o.position}`]]),
+          onMouseover: s[0] || (s[0] = (u) => y(!0)),
+          onMouseleave: s[1] || (s[1] = (u) => y(!1))
         }, [
-          s.toaster.type === "error" ? (m(), f("img", {
+          o.toaster.type === "error" ? (m(), f("img", {
             key: 0,
             src: require("@/icons/errorToaster.svg")
-          }, null, 8, z)) : s.toaster.type === "success" ? (m(), f("img", {
+          }, null, 8, z)) : o.toaster.type === "success" ? (m(), f("img", {
             key: 1,
             src: require("@/icons/successToaster.svg")
-          }, null, 8, Q)) : s.toaster.type === "info" ? (m(), f("img", {
+          }, null, 8, Q)) : o.toaster.type === "info" ? (m(), f("img", {
             key: 2,
             src: require("@/icons/infoToaster.svg")
-          }, null, 8, U)) : s.toaster.type === "warning" ? (m(), f("img", {
+          }, null, 8, U)) : o.toaster.type === "warning" ? (m(), f("img", {
             key: 3,
             src: require("@/icons/warningToaster.svg")
           }, null, 8, J)) : $("", !0),
           v("div", K, [
-            v("p", W, B(s.toaster.title), 1),
-            v("p", X, B(s.toaster.message), 1)
+            v("p", W, b(o.toaster.title), 1),
+            v("p", X, b(o.toaster.message), 1)
           ]),
           v("div", {
             class: "close-toaster",
@@ -166,11 +166,16 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
     }, 8, ["enter-active-class", "leave-active-class"]));
   }
 });
-const Y = (s = {}) => ({
+const Z = (o, t) => {
+  const e = o.__vccOpts || o;
+  for (const [l, n] of t)
+    e[l] = n;
+  return e;
+}, E = /* @__PURE__ */ Z(Y, [["__scopeId", "data-v-aa1470d1"]]), ee = (o = {}) => ({
   addToast(t) {
     const l = Object.assign({}, {
       toaster: t
-    }, s), n = this.createComponent(E, l, document.body);
+    }, o), n = this.createComponent(E, l, document.body);
     return {
       dismiss: n == null ? void 0 : n.ctx.dismiss
     };
@@ -179,23 +184,14 @@ const Y = (s = {}) => ({
     const r = j(t, e, n), i = document.createElement("div");
     return i.classList.add("toaster-pending"), l.appendChild(i), w(r, i), r.component;
   }
-}), te = {
-  install(s, t = {}) {
-    const e = Y(t);
-    s.config.globalProperties.$toast = e, s.provide("$toast", e), s.component("ToastComponent", E);
-  },
-  input: "src/main.ts",
-  output: {
-    dir: "dist",
-    format: ["es", "cjs", "umd"],
-    exports: "named",
-    globals: {
-      vue: "Vue"
-    }
+}), se = {
+  install(o, t = {}) {
+    const e = ee(t);
+    o.config.globalProperties.$toast = e, o.provide("$toast", e), o.component("ToastComponent", E);
   }
 };
 export {
   E as ToastComponent,
-  te as default,
-  Y as useToaster
+  se as default,
+  ee as useToaster
 };
