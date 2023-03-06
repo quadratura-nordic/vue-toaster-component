@@ -126,14 +126,30 @@ function setupContainer() {
   if (!parentTop.value) {
     parentTop.value = document.createElement("div");
     parentTop.value.className = "toaster toaster-top";
+    setStyles(parentTop.value);
   }
   if (!parentBottom.value) {
     parentBottom.value = document.createElement("div");
     parentBottom.value.className = "toaster toaster-bottom";
+    setStyles(parentBottom.value);
   }
+
   const container = document.body;
   container.appendChild(parentTop.value);
   container.appendChild(parentBottom.value);
+}
+
+function setStyles(element: HTMLElement) {
+  element.style.position = "fixed";
+  element.style.display = "flex";
+  element.style.top = "0";
+  element.style.bottom = "0";
+  element.style.left = "0";
+  element.style.right = "0";
+  element.style.overflow = "hidden";
+  element.style.zIndex = "9999";
+  element.style.pointerEvents = "none";
+  element.style.padding = "40px";
 }
 
 function shouldQueue() {
