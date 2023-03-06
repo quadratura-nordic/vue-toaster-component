@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: "src/main.ts",
       name: "vue-toaster-component",
-      fileName: (format) => `vue-toaster-component.${format}.ts`,
+      fileName: (format) => `vue-toaster-component.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

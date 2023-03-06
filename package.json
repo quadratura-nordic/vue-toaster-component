@@ -1,14 +1,29 @@
 {
   "name": "vue-toaster-component",
-  "main": "./dist/vue-toaster-component.umd.ts",
-  "module": "./dist/vue-toaster-component.esm.ts",
+  "main": "./dist/vue-toaster-component.umd.js",
+  "module": "./dist/vue-toaster-component.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-toaster-component.esm.ts",
-      "require": "./dist/vue-toaster-component.umd.ts"
-    }
+      "import": "./dist/vue-toaster-component.esm.js",
+      "require": "./dist/vue-toaster-component.umd.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/style.css": "./dist/style.css"
   },
-  "version": "1.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quadratura-nordic/vue-toaster-component"
+  },
+  "author": "Quadratura Nordic",
+  "license": "MIT",
+  "private": false,
+  "version": "1.3.0",
+  "description": "A simple toaster component for Vue 3",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "output.exports": "named",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
