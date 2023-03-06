@@ -172,7 +172,7 @@ const se = (s, t) => {
   for (const [l, i] of t)
     e[l] = i;
   return e;
-}, oe = /* @__PURE__ */ se(te, [["__scopeId", "data-v-e1cb0bfd"]]), ne = (s = {}) => ({
+}, oe = /* @__PURE__ */ se(te, [["__scopeId", "data-v-75fe97e8"]]), ne = (s = {}) => ({
   addToast(t) {
     const l = Object.assign({}, {
       toaster: t

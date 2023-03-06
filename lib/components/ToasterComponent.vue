@@ -192,6 +192,35 @@ function removeElement(el: HTMLElement) {
 </script>
 
 <style lang="scss" scoped>
+.toaster {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 40px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+}
+.body-text-bold {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+}
+
+.fine-print {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #8d96a8;
+}
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -246,17 +275,6 @@ function removeElement(el: HTMLElement) {
 }
 
 .toaster {
-  position: fixed;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  z-index: 9999;
-  pointer-events: none;
-  padding: 40px;
-
   .toaster-message {
     border-radius: 8px;
     padding: 10px;
@@ -272,6 +290,21 @@ function removeElement(el: HTMLElement) {
     min-width: 320px;
     max-width: 75%;
     width: auto;
+
+    &.toaster-position-top,
+    &.toaster-position-bottom {
+      align-self: center;
+    }
+
+    &.toaster-position-top-right,
+    &.toaster-position-bottom-right {
+      align-self: flex-end;
+    }
+
+    &.toaster-position-top-left,
+    &.toaster-position-bottom-left {
+      align-self: flex-start;
+    }
     .toaster-text {
       display: flex;
       align-items: flex-start;
@@ -307,21 +340,6 @@ function removeElement(el: HTMLElement) {
         opacity: 0.7;
       }
     }
-
-    &.toaster-position-top,
-    &.toaster-position-bottom {
-      align-self: center;
-    }
-
-    &.toaster-position-top-right,
-    &.toaster-position-bottom-right {
-      align-self: flex-end;
-    }
-
-    &.toaster-position-top-left,
-    &.toaster-position-bottom-left {
-      align-self: flex-start;
-    }
   }
 
   // Notice container positions
@@ -335,10 +353,6 @@ function removeElement(el: HTMLElement) {
 
   &.toaster-custom-parent {
     position: absolute;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 20px;
   }
 }
 </style>
