@@ -11,7 +11,7 @@ export default defineConfig({
       name: "vue-toaster-component",
       fileName: "vue-toaster-component",
     },
-    cssCodeSplit: false,
+    cssCodeSplit: true,
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
