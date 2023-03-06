@@ -42,7 +42,7 @@ const F = {
       type: "success"
     }) },
     queue: { type: Boolean, default: !0 },
-    duration: { default: 4e3 },
+    duration: { default: 4e5 },
     dismissible: { type: Boolean, default: !0 },
     pauseOnHover: { type: Boolean, default: !0 },
     onClick: null,

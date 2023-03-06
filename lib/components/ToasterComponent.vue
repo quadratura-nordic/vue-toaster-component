@@ -48,9 +48,9 @@ const props = withDefaults(
     position?: ToastPosition;
   }>(),
   {
-    duration: 4000,
+    // duration: 4000,
     // for debugging set duration to a higher value
-    // duration: 400000,
+    duration: 400000,
     dismissible: true,
     pauseOnHover: true,
     position: "top-right",
@@ -192,35 +192,11 @@ function removeElement(el: HTMLElement) {
 </script>
 
 <style lang="scss">
-.toaster {
-  position: fixed;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  z-index: 9999;
-  pointer-events: none;
-  padding: 40px;
-  @media screen and (max-width: 768px) {
-    padding: 20px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.body-text-bold {
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 22px;
-  color: #000;
-}
-
-.fine-print {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  color: #8d96a8;
-}
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -275,12 +251,30 @@ function removeElement(el: HTMLElement) {
 }
 
 .toaster {
+  --black-color: #000;
+  --white-color: #fff;
+  --secondary-color: #8d96a8;
+
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 40px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
   .toaster-message {
     border-radius: 8px;
     padding: 10px;
     padding-left: 20px;
     animation-duration: 150ms;
-    background-color: #fff;
+    background-color: var(--white-color);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
     pointer-events: auto;
     display: inline-flex;
@@ -290,6 +284,20 @@ function removeElement(el: HTMLElement) {
     min-width: 320px;
     max-width: 75%;
     width: auto;
+
+    .body-text-bold {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--black-color);
+    }
+
+    .fine-print {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: var(--secondary-color);
+    }
 
     &.toaster-position-top,
     &.toaster-position-bottom {
@@ -325,7 +333,7 @@ function removeElement(el: HTMLElement) {
         content: "";
         width: 100%;
         height: 1px;
-        background-color: #000;
+        background-color: var(--black-color);
         top: 5px;
       }
 
