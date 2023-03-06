@@ -1,16 +1,13 @@
+import { Toaster, ToastPosition } from "./Types";
 declare const _default: import("vue").DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
-    toaster?: {
-        title: string;
-        message: string;
-        type: "success" | "error" | "info" | "warning";
-    } | undefined;
+    toaster?: Toaster | undefined;
     queue?: boolean | undefined;
     duration?: number | undefined;
     dismissible?: boolean | undefined;
     pauseOnHover?: boolean | undefined;
     onClick?: ((...args: unknown[]) => void) | undefined;
     onDismiss?: ((...args: unknown[]) => void) | undefined;
-    position?: ("top-right" | "top" | "top-left" | "bottom-right" | "bottom" | "bottom-left") | undefined;
+    position?: ToastPosition | undefined;
 }>, {
     duration: number;
     dismissible: boolean;
@@ -23,18 +20,14 @@ declare const _default: import("vue").DefineComponent<__VLS_WithDefaults<__VLS_T
     };
     queue: boolean;
 }>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
-    toaster?: {
-        title: string;
-        message: string;
-        type: "success" | "error" | "info" | "warning";
-    } | undefined;
+    toaster?: Toaster | undefined;
     queue?: boolean | undefined;
     duration?: number | undefined;
     dismissible?: boolean | undefined;
     pauseOnHover?: boolean | undefined;
     onClick?: ((...args: unknown[]) => void) | undefined;
     onDismiss?: ((...args: unknown[]) => void) | undefined;
-    position?: ("top-right" | "top" | "top-left" | "bottom-right" | "bottom" | "bottom-left") | undefined;
+    position?: ToastPosition | undefined;
 }>, {
     duration: number;
     dismissible: boolean;
@@ -47,16 +40,12 @@ declare const _default: import("vue").DefineComponent<__VLS_WithDefaults<__VLS_T
     };
     queue: boolean;
 }>>>, {
-    toaster: {
-        title: string;
-        message: string;
-        type: "success" | "error" | "info" | "warning";
-    };
+    toaster: Toaster;
     queue: boolean;
     duration: number;
     dismissible: boolean;
     pauseOnHover: boolean;
-    position: "top-right" | "top" | "top-left" | "bottom-right" | "bottom" | "bottom-left";
+    position: ToastPosition;
 }>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;

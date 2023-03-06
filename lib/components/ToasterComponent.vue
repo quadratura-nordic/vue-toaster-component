@@ -25,13 +25,7 @@
 <script setup lang="ts">
 import { defineProps, computed, ref, onMounted, render, withDefaults, onBeforeUnmount } from "vue";
 import Timer from "./Timer";
-
-type Toaster = {
-  title: string;
-  message: string;
-  type: "success" | "error" | "info" | "warning";
-};
-type ToastPosition = "top-right" | "top" | "top-left" | "bottom-right" | "bottom" | "bottom-left";
+import { Toaster, ToastPosition } from "./Types";
 
 const Positions = {
   TOP_RIGHT: "top-right",
@@ -55,6 +49,7 @@ const props = withDefaults(
   }>(),
   {
     duration: 4000,
+    // for debugging set duration to a higher value
     // duration: 400000,
     dismissible: true,
     pauseOnHover: true,
@@ -258,7 +253,7 @@ function removeElement(el: HTMLElement) {
   left: 0;
   right: 0;
   overflow: hidden;
-  z-index: 1052;
+  z-index: 9999;
   pointer-events: none;
   padding: 40px;
 
@@ -274,8 +269,9 @@ function removeElement(el: HTMLElement) {
     justify-content: flex-start;
     align-items: center;
     column-gap: 20px;
-    width: 320px;
-    max-width: 90%;
+    min-width: 320px;
+    max-width: 75%;
+    width: auto;
     .toaster-text {
       display: flex;
       align-items: flex-start;
@@ -343,7 +339,6 @@ function removeElement(el: HTMLElement) {
 
   @media screen and (max-width: 768px) {
     padding: 20px;
-    position: fixed !important;
   }
 }
 </style>
