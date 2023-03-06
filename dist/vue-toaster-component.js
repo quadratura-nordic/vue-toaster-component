@@ -1,8 +1,9 @@
-var x = Object.defineProperty;
-var D = (o, t, e) => t in o ? x(o, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : o[t] = e;
-var d = (o, t, e) => (D(o, typeof t != "symbol" ? t + "" : t, e), e);
-import { defineComponent as H, ref as c, computed as C, onMounted as I, onBeforeUnmount as L, render as w, openBlock as m, createBlock as A, Transition as F, unref as B, withCtx as G, withDirectives as N, createElementVNode as v, normalizeClass as R, createElementBlock as f, createCommentVNode as $, toDisplayString as b, vShow as S, h as j } from "vue";
-class V {
+var _ = Object.defineProperty;
+var B = (o, t, e) => t in o ? _(o, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : o[t] = e;
+var d = (o, t, e) => (B(o, typeof t != "symbol" ? t + "" : t, e), e);
+import { defineComponent as P, ref as u, computed as f, onMounted as A, onBeforeUnmount as H, render as C, openBlock as I, createBlock as G, Transition as L, unref as N, withCtx as R, withDirectives as w, createElementVNode as M, normalizeClass as E, createElementBlock as v, createCommentVNode as S, toDisplayString as b, vShow as x, h as Y } from "vue";
+const J = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYuOTI3NyIgY3k9IjE2Ljg2MzMiIHI9IjE2IiBmaWxsPSIjRkY2NTY1Ii8+CjxwYXRoIGQ9Ik05LjkyNzczIDEwLjM2MzNMMjMuOTI3NyAyNC4zNjMzIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNjI1Ii8+CjxwYXRoIGQ9Ik0yMy45Mjc3IDEwLjM2MzNMOS45Mjc3MyAyNC4zNjMzIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNjI1Ii8+Cjwvc3ZnPgo=", X = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYuOTI3NyIgY3k9IjE2LjM2MzMiIHI9IjE2IiBmaWxsPSIjN0NEOTIwIi8+CjxwYXRoIGQ9Ik04LjkyNzczIDE2Ljk0MzlMMTQuODgxMiAyMi4zNjMzTDI0LjkyNzcgMTAuMzYzMyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjwvc3ZnPgo=", W = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYuOTI3NyIgY3k9IjE2Ljg2MzMiIHI9IjE2IiB0cmFuc2Zvcm09InJvdGF0ZSgxODAgMTYuOTI3NyAxNi44NjMzKSIgZmlsbD0iIzFDNjlENCIvPgo8cGF0aCBkPSJNMTYuOTI3NyAyNC4zNjUyTDE2LjkyNzcgMTQuMzY1MiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxwYXRoIGQ9Ik0xNi45Mjc3IDguMzY1MjNMMTYuOTI3NyAxMS4zNjUyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==", U = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYuOTI3NyIgY3k9IjE2Ljg2MzMiIHI9IjE2IiBmaWxsPSIjRkZDMzRGIi8+CjxwYXRoIGQ9Ik0xNi45Mjc3IDkuMzYzMjhWMTkuMzYzMyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxwYXRoIGQ9Ik0xNi45Mjc3IDI1LjM2MzNMMTYuOTI3NyAyMi4zNjMzIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==";
+class F {
   constructor(t, e) {
     d(this, "startedAt");
     d(this, "callback");
@@ -20,7 +21,19 @@ class V {
     clearTimeout(this.timer);
   }
 }
-const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-text" }, W = { class: "body-text-bold" }, X = { class: "fine-print" }, Y = /* @__PURE__ */ H({
+const Q = {
+  key: 0,
+  src: J
+}, K = {
+  key: 1,
+  src: X
+}, q = {
+  key: 2,
+  src: W
+}, $ = {
+  key: 3,
+  src: U
+}, V = { class: "toaster-text" }, ee = { class: "body-text-bold" }, te = { class: "fine-print" }, oe = /* @__PURE__ */ P({
   __name: "ToasterComponent",
   props: {
     toaster: { default: () => ({
@@ -44,7 +57,7 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
       BOTTOM_RIGHT: "bottom-right",
       BOTTOM: "bottom",
       BOTTOM_LEFT: "bottom-left"
-    }, l = c(!1), n = c(null), r = c(null), i = c(), p = c(), h = c(), k = C(() => {
+    }, r = u(!1), n = u(null), i = u(null), l = u(), m = u(), p = u(), O = f(() => {
       switch (t.position) {
         case e.TOP:
         case e.TOP_RIGHT:
@@ -53,11 +66,11 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
         case e.BOTTOM:
         case e.BOTTOM_RIGHT:
         case e.BOTTOM_LEFT:
-          return r.value;
+          return i.value;
         default:
           return n.value;
       }
-    }), O = C(() => {
+    }), g = f(() => {
       switch (t.position) {
         case e.TOP:
         case e.TOP_RIGHT:
@@ -80,118 +93,106 @@ const z = ["src"], Q = ["src"], U = ["src"], J = ["src"], K = { class: "toaster-
           };
       }
     });
-    I(() => {
-      M(), _();
-    }), L(() => {
+    A(() => {
+      D(), y();
+    }), H(() => {
       T();
     });
-    function M() {
-      if (n.value = document.querySelector(".toaster.toaster-top"), r.value = document.querySelector(".toaster.toaster-bottom"), n.value && r.value)
+    function D() {
+      if (n.value = document.querySelector(".toaster.toaster-top"), i.value = document.querySelector(".toaster.toaster-bottom"), n.value && i.value)
         return;
-      n.value || (n.value = document.createElement("div"), n.value.className = "toaster toaster-top"), r.value || (r.value = document.createElement("div"), r.value.className = "toaster toaster-bottom");
+      n.value || (n.value = document.createElement("div"), n.value.className = "toaster toaster-top"), i.value || (i.value = document.createElement("div"), i.value.className = "toaster toaster-bottom");
       const a = document.body;
-      a.appendChild(n.value), a.appendChild(r.value);
+      a.appendChild(n.value), a.appendChild(i.value);
     }
-    function P() {
+    function Z() {
       var a, s;
-      return t.queue ? n.value && ((a = n.value) == null ? void 0 : a.childElementCount) > 0 || r.value && ((s = r.value) == null ? void 0 : s.childElementCount) > 0 : !1;
+      return t.queue ? n.value && ((a = n.value) == null ? void 0 : a.childElementCount) > 0 || i.value && ((s = i.value) == null ? void 0 : s.childElementCount) > 0 : !1;
     }
     function T(...a) {
-      i.value && i.value.stop(), clearTimeout(h.value), l.value = !1, setTimeout(() => {
-        var u;
-        (u = t.onDismiss) == null || u.apply(null, a);
-        const s = p.value;
-        s && (w(null, s), g(s));
+      l.value && l.value.stop(), clearTimeout(p.value), r.value = !1, setTimeout(() => {
+        var c;
+        (c = t.onDismiss) == null || c.apply(null, a);
+        const s = m.value;
+        s && (C(null, s), j(s));
       }, 150);
     }
-    function _() {
-      var s, u;
-      if (P()) {
-        h.value = setTimeout(_, 250);
+    function y() {
+      var s, c;
+      if (Z()) {
+        p.value = setTimeout(y, 250);
         return;
       }
-      const a = (s = p.value) == null ? void 0 : s.parentElement;
-      (u = k.value) == null || u.insertAdjacentElement("afterbegin", p.value), g(a), l.value = !0, t.duration && (i.value = new V(T, t.duration));
+      const a = (s = m.value) == null ? void 0 : s.parentElement;
+      (c = O.value) == null || c.insertAdjacentElement("afterbegin", m.value), j(a), r.value = !0, t.duration && (l.value = new F(T, t.duration));
     }
-    function q(...a) {
+    function k(...a) {
       var s;
       t.dismissible && ((s = t.onClick) == null || s.apply(null, a), T());
     }
-    function y(a) {
-      !t.pauseOnHover || !i.value || (a ? i.value.pause() : i.value.resume());
+    function z(a) {
+      !t.pauseOnHover || !l.value || (a ? l.value.pause() : l.value.resume());
     }
-    function g(a) {
+    function j(a) {
       var s;
       typeof a.remove < "u" ? a.remove() : (s = a.parentNode) == null || s.removeChild(a);
     }
-    return (a, s) => (m(), A(F, {
-      "enter-active-class": B(O).enter,
-      "leave-active-class": B(O).leave
+    return (a, s) => (I(), G(L, {
+      "enter-active-class": N(g).enter,
+      "leave-active-class": N(g).leave
     }, {
-      default: G(() => [
-        N(v("div", {
+      default: R(() => [
+        w(M("div", {
           ref_key: "toasterMessage",
-          ref: p,
+          ref: m,
           role: "alert",
-          class: R(["toaster-message", [`toaster-position-${o.position}`]]),
-          onMouseover: s[0] || (s[0] = (u) => y(!0)),
-          onMouseleave: s[1] || (s[1] = (u) => y(!1))
+          class: E(["toaster-message", [`toaster-position-${o.position}`]]),
+          onMouseover: s[0] || (s[0] = (c) => z(!0)),
+          onMouseleave: s[1] || (s[1] = (c) => z(!1))
         }, [
-          o.toaster.type === "error" ? (m(), f("img", {
-            key: 0,
-            src: require("@/icons/errorToaster.svg")
-          }, null, 8, z)) : o.toaster.type === "success" ? (m(), f("img", {
-            key: 1,
-            src: require("@/icons/successToaster.svg")
-          }, null, 8, Q)) : o.toaster.type === "info" ? (m(), f("img", {
-            key: 2,
-            src: require("@/icons/infoToaster.svg")
-          }, null, 8, U)) : o.toaster.type === "warning" ? (m(), f("img", {
-            key: 3,
-            src: require("@/icons/warningToaster.svg")
-          }, null, 8, J)) : $("", !0),
-          v("div", K, [
-            v("p", W, b(o.toaster.title), 1),
-            v("p", X, b(o.toaster.message), 1)
+          o.toaster.type === "error" ? (I(), v("img", Q)) : o.toaster.type === "success" ? (I(), v("img", K)) : o.toaster.type === "info" ? (I(), v("img", q)) : o.toaster.type === "warning" ? (I(), v("img", $)) : S("", !0),
+          M("div", V, [
+            M("p", ee, b(o.toaster.title), 1),
+            M("p", te, b(o.toaster.message), 1)
           ]),
-          v("div", {
+          M("div", {
             class: "close-toaster",
-            onClick: q
+            onClick: k
           })
         ], 34), [
-          [S, l.value]
+          [x, r.value]
         ])
       ]),
       _: 1
     }, 8, ["enter-active-class", "leave-active-class"]));
   }
 });
-const Z = (o, t) => {
+const se = (o, t) => {
   const e = o.__vccOpts || o;
-  for (const [l, n] of t)
-    e[l] = n;
+  for (const [r, n] of t)
+    e[r] = n;
   return e;
-}, E = /* @__PURE__ */ Z(Y, [["__scopeId", "data-v-aa1470d1"]]), ee = (o = {}) => ({
+}, h = /* @__PURE__ */ se(oe, [["__scopeId", "data-v-9c9f4683"]]), ae = (o = {}) => ({
   addToast(t) {
-    const l = Object.assign({}, {
+    const r = Object.assign({}, {
       toaster: t
-    }, o), n = this.createComponent(E, l, document.body);
+    }, o), n = this.createComponent(h, r, document.body);
     return {
       dismiss: n == null ? void 0 : n.ctx.dismiss
     };
   },
-  createComponent(t, e, l, n = {}) {
-    const r = j(t, e, n), i = document.createElement("div");
-    return i.classList.add("toaster-pending"), l.appendChild(i), w(r, i), r.component;
+  createComponent(t, e, r, n = {}) {
+    const i = Y(t, e, n), l = document.createElement("div");
+    return l.classList.add("toaster-pending"), r.appendChild(l), C(i, l), i.component;
   }
-}), se = {
+}), le = {
   install(o, t = {}) {
-    const e = ee(t);
-    o.config.globalProperties.$toast = e, o.provide("$toast", e), o.component("ToastComponent", E);
+    const e = ae(t);
+    o.config.globalProperties.$toast = e, o.provide("$toast", e), o.component("ToastComponent", h);
   }
 };
 export {
-  E as ToastComponent,
-  se as default,
-  ee as useToaster
+  h as ToastComponent,
+  le as default,
+  ae as useToaster
 };

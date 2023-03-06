@@ -9,10 +9,10 @@
       :class="[`toaster-position-${position}`]"
       @mouseleave="toggleTimer(false)"
     >
-      <img :src="require('@/icons/errorToaster.svg')" v-if="toaster.type === 'error'" />
-      <img :src="require('@/icons/successToaster.svg')" v-else-if="toaster.type === 'success'" />
-      <img :src="require('@/icons/infoToaster.svg')" v-else-if="toaster.type === 'info'" />
-      <img :src="require('@/icons/warningToaster.svg')" v-else-if="toaster.type === 'warning'" />
+      <img src="./icons/errorToaster.svg" v-if="toaster.type === 'error'" />
+      <img src="./icons/successToaster.svg" v-else-if="toaster.type === 'success'" />
+      <img src="./icons/infoToaster.svg" v-else-if="toaster.type === 'info'" />
+      <img src="./icons/warningToaster.svg" v-else-if="toaster.type === 'warning'" />
       <div class="toaster-text">
         <p class="body-text-bold">{{ toaster.title }}</p>
         <p class="fine-print">{{ toaster.message }}</p>
