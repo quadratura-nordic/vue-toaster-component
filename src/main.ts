@@ -1,5 +1,5 @@
-import ToastComponent from "./ToasterComponent.vue";
-import { useToaster } from "./Toaster";
+import ToastComponent from "./components/ToasterComponent.vue";
+import { useToaster } from "./components/Toaster";
 import { App, Plugin } from "vue";
 
 export default {

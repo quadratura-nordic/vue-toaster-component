@@ -2,7 +2,7 @@ export default class Timer {
   private startedAt: number;
   private callback: () => void;
   private delay: number;
-  private timer: number;
+  private timer: number | NodeJS.Timeout;
   constructor(callback: () => void, delay: number) {
     this.startedAt = Date.now();
     this.callback = callback;

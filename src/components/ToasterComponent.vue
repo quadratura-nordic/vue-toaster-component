@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { defineProps, computed, ref, onMounted, render, withDefaults, onBeforeUnmount } from "vue";
-import Timer from "@/Timer";
+import Timer from "./Timer";
 
 type Toaster = {
   title: string;
