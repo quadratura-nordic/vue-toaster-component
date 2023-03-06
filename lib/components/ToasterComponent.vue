@@ -191,7 +191,7 @@ function removeElement(el: HTMLElement) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .toaster {
   position: fixed;
   display: flex;
